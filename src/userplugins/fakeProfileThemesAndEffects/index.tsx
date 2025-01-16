@@ -5,7 +5,7 @@
  */
 
 import { definePluginSettings } from "@api/Settings";
-import { EquicordDevs } from "@utils/constants";
+import { Devs } from "@utils/constants";
 import { canonicalizeMatch, canonicalizeReplace } from "@utils/patches";
 import definePlugin, { OptionType } from "@utils/types";
 import { useMemo } from "@webpack/common";
@@ -51,7 +51,7 @@ export const settings = definePluginSettings({
 export default definePlugin({
     name: "FakeProfileThemesAndEffects",
     description: "Allows profile theming and the usage of profile effects by hiding the colors and effect ID in your About Me using invisible, zero-width characters",
-    authors: [EquicordDevs.ryan],
+    authors: [Devs.ryan],
     patches: [
         // Patches UserProfileStore.getUserProfile
         {
