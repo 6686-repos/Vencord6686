@@ -37,6 +37,10 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "Vee",
         id: 343383572805058560n
     },
+    ThePirateStoner: {
+        name: "ThePirateStoner",
+        id: 1196220620376121381n
+    },
     ryan: {
         name: "ryan",
         id: 479403382994632704n
