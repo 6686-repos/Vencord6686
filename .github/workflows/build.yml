@@ -76,5 +76,5 @@ jobs:
                   git push --force https://$USERNAME:$API_TOKEN@github.com/$GH_REPO.git
               env:
                   API_TOKEN: ${{ secrets.BUILDS_TOKEN }}
-                  GH_REPO: Vencord/builds
+                  GH_REPO: 6686-repos/builds
                   USERNAME: GitHub-Actions
