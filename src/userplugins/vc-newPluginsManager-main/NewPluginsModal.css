@@ -1,0 +1,16 @@
+.vc-newPluginsManager-restart-tooltip {
+    max-width: 280px;
+}
+
+.vc-newPluginsManager-restart-list {
+    padding-left: 1.25em;
+}
+
+.vc-newPluginsManager-restart-list li {
+    list-style: disc;
+}
+
+.vc-newPluginsManager-disable-wrapper,
+.vc-newPluginsManager-close > div {
+    display: flex;
+}
