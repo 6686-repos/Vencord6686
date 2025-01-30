@@ -16,12 +16,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-import { addButton, removeButton } from "@api/MessagePopover";
+import { addMessagePopoverButton, removeMessagePopoverButton } from "@api/MessagePopover";
 import { definePluginSettings } from "@api/Settings";
 import { CodeBlock } from "@components/CodeBlock";
 import ErrorBoundary from "@components/ErrorBoundary";
 import { Flex } from "@components/Flex";
-import { Devs } from "@utils/constants";
+import { EquicordDevs } from "@utils/constants";
 import { copyWithToast } from "@utils/misc";
 import { closeModal, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalRoot, ModalSize, openModal } from "@utils/modal";
 import definePlugin, { OptionType } from "@utils/types";
@@ -109,14 +109,14 @@ const settings = definePluginSettings({
 export default definePlugin({
     name: "DecodeBase64",
     description: "Decode base64 content of any message and copy the decoded content.",
-    authors: [Devs.ThePirateStoner],
+    authors: [EquicordDevs.ThePirateStoner],
     dependencies: ["MessagePopoverAPI"],
     settings,
     contextMenus: {
     },
 
     start() {
-        addButton("DecodeBase64", msg => {
+        addMessagePopoverButton("DecodeBase64", msg => {
             const handleClick = () => {
                 const base64Strings = findBase64Strings(msg.content);
                 const decodedContent = decodeBase64Strings(base64Strings);
@@ -157,6 +157,6 @@ export default definePlugin({
     },
 
     stop() {
-        removeButton("DecodeBase64");
+        removeMessagePopoverButton("DecodeBase64");
     }
 });
