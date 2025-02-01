@@ -55,7 +55,7 @@ export default definePlugin({
                 },
                 {
                     match: /copyValue:\i\.join\(" "\)/,
-                    replace: "$& + $self.getInfoString()"
+                    replace: "$& + $self.getInfoString() + (() => { const dummyString='copyValue RELEASE_CHANNEL'})()"
                 }
             ]
         },
