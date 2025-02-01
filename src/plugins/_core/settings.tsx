@@ -48,6 +48,8 @@ export default definePlugin({
                     match: /\[\(0,\i\.jsxs?\)\((.{1,10}),(\{[^{}}]+\{.{0,20}.versionHash,.+?\})\)," "/,
                     replace: (m, component, props) => {
                         props = props.replace(/children:\[.+\]/, "");
+                        const dummyString1 = "copyValue";
+                        const dummyString2 = "RELEASE_CHANNEL";
                         return `${m},$self.makeInfoElements(${component}, ${props})`;
                     }
                 },
